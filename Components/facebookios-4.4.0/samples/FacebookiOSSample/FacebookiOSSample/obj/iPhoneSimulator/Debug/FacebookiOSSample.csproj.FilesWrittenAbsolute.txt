@@ -1,0 +1,16 @@
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/obj/iPhoneSimulator/Debug/ibtool/LaunchScreen.nib
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC~iphone.nib/objects-8.0+.nib
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC~iphone.nib/runtime.nib
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/UIViewController-6~iphone.nib/objects-8.0+.nib
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/UIViewController-6~iphone.nib/runtime.nib
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/obj/iPhoneSimulator/Debug/ibtool/Main~iphone.storyboardc/Info-8.0+.plist
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/obj/iPhoneSimulator/Debug/ibtool/Main~iphone.storyboardc/Info.plist
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/obj/iPhoneSimulator/Debug/actool/partial-info.plist
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/obj/iPhoneSimulator/Debug/actool/asset-manifest.plist
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/obj/iPhoneSimulator/Debug/
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/bin/iPhoneSimulator/Debug/FacebookiOSSample.exe.mdb
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/bin/iPhoneSimulator/Debug/FacebookiOSSample.exe
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/obj/iPhoneSimulator/Debug/FacebookiOSSample.exe
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/obj/iPhoneSimulator/Debug/FacebookiOSSample.exe.mdb
+/Users/eric/Projects/IdeaBag.Core/Components/facebookios-4.4.0/samples/FacebookiOSSample/FacebookiOSSample/bin/iPhoneSimulator/Debug/Facebook.dll

@@ -1,0 +1,28 @@
+﻿<Properties StartupItem="FacebookiOSSample/FacebookiOSSample.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../IdeaBag.iOS_Test2/ViewController.cs">
+    <Files>
+      <File FileName="../../../../IdeaBag.iOS_Test2/ViewController.cs" Line="83" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FacebookiOSSample" expanded="True">
+            <Node name="FacebookiOSSample" expanded="True" />
+          </Node>
+          <Node name="IdeaBag.Core" expanded="True" selected="True">
+            <Node name="IdeaBag.iOS_Test2" expanded="True">
+              <Node name="ComponentReferenceFolder" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/eric/Projects/IdeaBag.Core/IdeaBag.iOS_Test2/ViewController.cs" line="93" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

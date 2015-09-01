@@ -1,0 +1,7 @@
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.Portable/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.Portable/bin/Debug/IdeaBag.Portable.dll.mdb
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.Portable/bin/Debug/IdeaBag.Portable.dll
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.Portable/obj/Debug/IdeaBag.Portable.dll
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.Portable/obj/Debug/IdeaBag.Portable.dll.mdb
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.Portable/bin/Debug/Xamarin.Forms.Core.dll
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.Portable/bin/Debug/Xamarin.Forms.Xaml.dll

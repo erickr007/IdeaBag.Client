@@ -1,0 +1,7 @@
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.iOS_Test2.UITests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.iOS_Test2.UITests/bin/Debug/IdeaBag.iOS_Test2.UITests.dll.mdb
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.iOS_Test2.UITests/bin/Debug/IdeaBag.iOS_Test2.UITests.dll
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.iOS_Test2.UITests/obj/Debug/IdeaBag.iOS_Test2.UITests.dll
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.iOS_Test2.UITests/obj/Debug/IdeaBag.iOS_Test2.UITests.dll.mdb
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.iOS_Test2.UITests/bin/Debug/nunit.framework.dll
+/Users/eric/Projects/IdeaBag.Core/IdeaBag.iOS_Test2.UITests/bin/Debug/Xamarin.UITest.dll
