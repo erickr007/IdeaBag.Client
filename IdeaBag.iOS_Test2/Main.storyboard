@@ -473,7 +473,7 @@
         <!--Friends-->
         <scene sceneID="d6s-bw-7rz">
             <objects>
-                <tableViewController storyboardIdentifier="Friends" title="Friends" id="L2d-Ut-FxL" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Contacts" title="Friends" id="L2d-Ut-FxL" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Friends" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LDw-mC-VfR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
