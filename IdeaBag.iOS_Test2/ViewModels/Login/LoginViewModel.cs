@@ -66,11 +66,10 @@ namespace IdeaBag.Client.iOS.ViewModels
 		#region Event Handlers
 
 		private void OnLoginTouchUpInside(object sender, EventArgs args){
-
-			_loginurl += string.Format ("?uid={0}&pw={1}", _username, _password);
+			string url = string.Format ("{0}?uid={1}&pw={2}", _loginurl, _username, _password);
 
 			WebClient client = new WebClient ();
-			string result = client.DownloadString (_loginurl);
+			string result = client.DownloadString (url);
 
 			LoginResultModel model = JsonTools.Deserialize<LoginResultModel> (result);
 

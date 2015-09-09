@@ -6,8 +6,8 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/eric/Projects/IdeaBag.Core/IdeaBag.iOS_Test2/obj/iPhoneSimulator/Debug/actool/Assets.car</string>
-			<string>/Users/eric/Projects/IdeaBag.Core/IdeaBag.iOS_Test2/obj/iPhoneSimulator/Debug/actool/partial-info.plist</string>
+			<string>/Users/eric/Projects/IdeaBag.Client/IdeaBag.iOS_Test2/obj/iPhoneSimulator/Debug/actool/Assets.car</string>
+			<string>/Users/eric/Projects/IdeaBag.Client/IdeaBag.iOS_Test2/obj/iPhoneSimulator/Debug/actool/partial-info.plist</string>
 		</array>
 	</dict>
 </dict>

@@ -61,10 +61,19 @@ namespace IdeaBag.Client.iOS
 		private void HandleLoginResult(object sender, LoginResultModel result){
 
 			if (result.ResultStatus == LoginResultType.Success) {
+				lblValidation.Hidden = true;
 				UIStoryboard board = UIStoryboard.FromName ("Main", null);
 
 				UIViewController ctrl = (UIViewController)board.InstantiateViewController ("Ideas");
 				this.PresentViewController (ctrl, true, null);
+			} 
+			else if (result.ResultStatus == LoginResultType.UserNotFound) {
+				lblValidation.Text = "User and/or Password not found.";
+				lblValidation.Hidden = false;
+			}
+			else if (result.ResultStatus == LoginResultType.UserDisabled) {
+				lblValidation.Text = "This user is not currently activated.";
+				lblValidation.Hidden = false;
 			}
 		}
 

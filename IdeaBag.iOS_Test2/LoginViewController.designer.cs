@@ -20,6 +20,14 @@ namespace IdeaBag.Client.iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnSignup { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblValidation { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField tbPassword { get; set; }
 
 		[Outlet]
@@ -31,6 +39,14 @@ namespace IdeaBag.Client.iOS
 			if (btnLogin != null) {
 				btnLogin.Dispose ();
 				btnLogin = null;
+			}
+			if (btnSignup != null) {
+				btnSignup.Dispose ();
+				btnSignup = null;
+			}
+			if (lblValidation != null) {
+				lblValidation.Dispose ();
+				lblValidation = null;
 			}
 			if (tbPassword != null) {
 				tbPassword.Dispose ();
