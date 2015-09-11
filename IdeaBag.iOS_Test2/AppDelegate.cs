@@ -34,6 +34,9 @@ namespace IdeaBag.Client.iOS
 			Settings.AppID = appId;
 			Settings.DisplayName = appName;
 
+
+			//- TODO:  Create Client SQLite Database if does not already exist
+
 			return ApplicationDelegate.SharedInstance.FinishedLaunching (application, launchOptions);
 		}
 

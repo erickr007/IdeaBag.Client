@@ -37,6 +37,10 @@
 	-r \
 	/Volumes/C/Development/SourceCode/IdeaBag/Server/IdeaBag.Server.Core/Portable/IdeaBag.Portable.Data/bin/Debug/IdeaBag.Portable.Data.dll \
 	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Mono.Data.Sqlite.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Data.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \

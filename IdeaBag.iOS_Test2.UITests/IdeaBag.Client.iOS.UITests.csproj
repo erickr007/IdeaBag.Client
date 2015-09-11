@@ -41,9 +41,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\IdeaBag.iOS_Test2\IdeaBag.iOS_Test2.csproj">
+    <ProjectReference Include="..\IdeaBag.iOS_Test2\IdeaBag.Client.iOS.csproj">
       <Project>{405A0C4E-B086-43A7-812E-6F543D15A716}</Project>
-      <Name>IdeaBag.iOS_Test2</Name>
+      <Name>IdeaBag.Client.iOS</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>

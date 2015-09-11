@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdeaBag.Portable.Client.Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdeaBag.Portable.ViewModels", "..\..\Documents\IdeaBag\Research_RealtimeHub\RealtimeHub.Portable.ViewModels\IdeaBag.Portable.ViewModels.csproj", "{3A3CAFFB-7CCF-41D5-A3A2-1992EEF2F7E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdeaBag.iOS_Test2", "IdeaBag.iOS_Test2\IdeaBag.iOS_Test2.csproj", "{405A0C4E-B086-43A7-812E-6F543D15A716}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdeaBag.Client.iOS", "IdeaBag.iOS_Test2\IdeaBag.Client.iOS.csproj", "{405A0C4E-B086-43A7-812E-6F543D15A716}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdeaBag.iOS_Test2.UITests", "IdeaBag.iOS_Test2.UITests\IdeaBag.iOS_Test2.UITests.csproj", "{3094D37F-ABF3-4A92-8086-A132F4CAD5FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdeaBag.Client.iOS.UITests", "IdeaBag.iOS_Test2.UITests\IdeaBag.Client.iOS.UITests.csproj", "{3094D37F-ABF3-4A92-8086-A132F4CAD5FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

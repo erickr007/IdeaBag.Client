@@ -81,6 +81,8 @@
     <Reference Include="IdeaBag.Portable.Data">
       <HintPath>..\..\..\..\..\Volumes\C\Development\SourceCode\IdeaBag\Server\IdeaBag.Server.Core\Portable\IdeaBag.Portable.Data\bin\Debug\IdeaBag.Portable.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -117,6 +119,11 @@
     <Compile Include="SignupViewController.designer.cs">
       <DependentUpon>SignupViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess\DatabaseScripts.cs" />
+    <Compile Include="DataAccess\DatabaseManager.cs" />
+    <Compile Include="SQLite.cs" />
+    <Compile Include="SQLiteAsync.cs" />
+    <Compile Include="DataAccess\DatabaseHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -131,5 +138,6 @@
   <ItemGroup>
     <Folder Include="ViewModels\" />
     <Folder Include="ViewModels\Login\" />
+    <Folder Include="DataAccess\" />
   </ItemGroup>
 </Project>
