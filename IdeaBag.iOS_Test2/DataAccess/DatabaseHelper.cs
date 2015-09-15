@@ -13,8 +13,8 @@ namespace IdeaBag.Client.iOS.DataAccess
 	{
 		#region Execute Query
 
-		public static List<T> ExecuteQuery<T>(string connectionstring, string cmd){
-			using (var conn = new SQLiteConnection (connectionstring)) {
+		public static List<T> ExecuteQuery<T>(string dbpath, string cmd){
+			using (var conn = new SQLiteConnection (dbpath)) {
 				SQLiteCommand command = new SQLiteCommand (conn);
 				command.CommandText = cmd;
 
@@ -29,7 +29,16 @@ namespace IdeaBag.Client.iOS.DataAccess
 
 		#region Execute Non Query
 
+		public static int ExecuteNonQuery(string dbpath, string cmd){
+			using (var conn = new SQLiteConnection (dbpath)) {
+				SQLiteCommand command = new SQLiteCommand (conn);
+				command.CommandText = cmd;
 
+				int results = command.ExecuteNonQuery();
+
+				return results;
+			}
+		}
 
 		#endregion
 	}

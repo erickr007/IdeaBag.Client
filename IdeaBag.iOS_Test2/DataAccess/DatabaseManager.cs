@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.IO;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using IdeaBag.Portable.Data;
 using IdeaBag.Portable.Data.Models;
 
-using IdeaBag.Client.iOS.DataAccess;
 
 namespace IdeaBag.Client.iOS.DataAccess
 {
@@ -16,7 +15,7 @@ namespace IdeaBag.Client.iOS.DataAccess
 		#region Private Properties
 
 		private static DatabaseManager _instance;
-		private string _connectionstring;
+		private string _dbpath;
 
 		#endregion
 
@@ -29,8 +28,7 @@ namespace IdeaBag.Client.iOS.DataAccess
 			{
 				if (_instance == null)
 				{
-					string connectionstring = "";
-					_instance = new DatabaseManager(connectionstring);
+					_instance = new DatabaseManager();
 				}
 
 				return _instance;
@@ -42,9 +40,50 @@ namespace IdeaBag.Client.iOS.DataAccess
 
 		#region Constructor
 
-		private DatabaseManager(string connectionstring)
-		{
-			this._connectionstring = connectionstring;
+		private DatabaseManager(){}
+
+		#endregion
+
+
+
+		#region Initialize
+
+
+		/// <summary>
+		/// Create database if it does not exist
+		/// </summary>
+		public void Initialize(string dbpath){
+
+			_dbpath = dbpath;
+
+			//- Create database file and insert data tables
+			if (!File.Exists (_dbpath)) {
+				try{
+					//- Create database
+					File.Create (_dbpath);
+
+					//- Insert database tables
+
+					// Application Settings
+					string cmd = DatabaseScripts.CreateApplicationSettingsTableScript();
+					int result = DatabaseHelper.ExecuteNonQuery(_dbpath, cmd);
+
+					// User Settings
+
+
+					// Contacts
+
+
+					// Messages
+
+
+					// Log Messages
+
+				}
+				catch(Exception ex){
+					
+				}
+			}
 		}
 
 		#endregion
@@ -62,7 +101,7 @@ namespace IdeaBag.Client.iOS.DataAccess
 
 			try
 			{
-				List<ApplicationSettingsModel> settingsresult = DatabaseHelper.ExecuteQuery<ApplicationSettingsModel>(_connectionstring, cmd);
+				List<ApplicationSettingsModel> settingsresult = DatabaseHelper.ExecuteQuery<ApplicationSettingsModel>(_dbpath, cmd);
 
 
 			}
@@ -76,7 +115,7 @@ namespace IdeaBag.Client.iOS.DataAccess
 
 		#endregion
 
-		/*
+
 		#region INSERT
 
 		public async void InsertInitialApplicationSettings(ApplicationSettingsModel settings)
@@ -85,8 +124,7 @@ namespace IdeaBag.Client.iOS.DataAccess
 
 			try
 			{
-				SQLiteWinRT.Database db = await App.GetDatabaseAsync();
-				await DatabaseHelper.ExecuteNonQueryStatement(db, cmd, "Insert initial application settings");
+				int result = DatabaseHelper.ExecuteNonQuery(_dbpath, cmd);
 
 
 			}
@@ -98,9 +136,9 @@ namespace IdeaBag.Client.iOS.DataAccess
 
 		#endregion
 
-		#endregion
+		//#endregion
 
-
+		/*
 
 		#region Messages
 

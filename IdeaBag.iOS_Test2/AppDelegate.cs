@@ -2,6 +2,9 @@
 using UIKit;
 using Facebook.CoreKit;
 using Facebook.LoginKit;
+using System;
+using System.IO;
+using IdeaBag.Client.iOS.DataAccess;
 
 namespace IdeaBag.Client.iOS
 {
@@ -35,7 +38,15 @@ namespace IdeaBag.Client.iOS
 			Settings.DisplayName = appName;
 
 
-			//- TODO:  Create Client SQLite Database if does not already exist
+			//- Initialize client database
+			string datadir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+			string dbdir = Path.Combine(datadir, "IdeaBag");
+
+			if (!Directory.Exists (dbdir))
+				Directory.CreateDirectory (dbdir);
+
+			string dbpath = Path.Combine (dbdir, "clientAppData.db");
+			DatabaseManager.Instance.Initialize (dbpath);
 
 			return ApplicationDelegate.SharedInstance.FinishedLaunching (application, launchOptions);
 		}
