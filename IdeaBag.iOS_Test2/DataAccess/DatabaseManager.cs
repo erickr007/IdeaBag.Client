@@ -69,15 +69,25 @@ namespace IdeaBag.Client.iOS.DataAccess
 					int result = DatabaseHelper.ExecuteNonQuery(_dbpath, cmd);
 
 					// User Settings
-
+					cmd = DatabaseScripts.CreateUsersTableScript();
+					result = DatabaseHelper.ExecuteNonQuery(_dbpath,cmd);
 
 					// Contacts
-
+					cmd = DatabaseScripts.CreateContactsTableScript();
+					result = DatabaseHelper.ExecuteNonQuery(_dbpath, cmd);
 
 					// Messages
-
+					cmd = DatabaseScripts.CreateMessageTableScript();
+					result = DatabaseHelper.ExecuteNonQuery(_dbpath, cmd);
 
 					// Log Messages
+					cmd = DatabaseScripts.CreateLogMessagesTableScript();
+					result = DatabaseHelper.ExecuteNonQuery(_dbpath, cmd);
+
+					// Log Message Types
+					cmd = DatabaseScripts.CreateLogMessageTypesScript();
+					result = DatabaseHelper.ExecuteNonQuery(_dbpath, cmd);
+
 
 				}
 				catch(Exception ex){
