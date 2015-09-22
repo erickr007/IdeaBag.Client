@@ -14,6 +14,10 @@
 		D86098421B82310D00D37303 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86098411B82310D00D37303 /* Images.xcassets */; };
 		D86098451B82310D00D37303 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86098431B82310D00D37303 /* LaunchScreen.xib */; };
 		D86098511B82310D00D37303 /* IdeaBag_3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D86098501B82310D00D37303 /* IdeaBag_3Tests.m */; };
+		D8FDF8561BB0B2DE00EF8A28 /* PrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FDF8551BB0B2DE00EF8A28 /* PrivacyViewController.m */; };
+		D8FDF8591BB0B38E00EF8A28 /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FDF8581BB0B38E00EF8A28 /* FriendsTableViewController.m */; };
+		D8FDF85F1BB0BC0F00EF8A28 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FDF85E1BB0BC0F00EF8A28 /* HelpViewController.m */; };
+		D8FDF8621BB0BCF700EF8A28 /* SettingsNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FDF8611BB0BCF700EF8A28 /* SettingsNavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		D860984A1B82310D00D37303 /* IdeaBag-3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IdeaBag-3Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D860984F1B82310D00D37303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D86098501B82310D00D37303 /* IdeaBag_3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdeaBag_3Tests.m; sourceTree = "<group>"; };
+		D8FDF8541BB0B2DE00EF8A28 /* PrivacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyViewController.h; sourceTree = "<group>"; };
+		D8FDF8551BB0B2DE00EF8A28 /* PrivacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyViewController.m; sourceTree = "<group>"; };
+		D8FDF8571BB0B38E00EF8A28 /* FriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewController.h; sourceTree = "<group>"; };
+		D8FDF8581BB0B38E00EF8A28 /* FriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewController.m; sourceTree = "<group>"; };
+		D8FDF85D1BB0BC0F00EF8A28 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		D8FDF85E1BB0BC0F00EF8A28 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		D8FDF8601BB0BCF700EF8A28 /* SettingsNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsNavigationViewController.h; sourceTree = "<group>"; };
+		D8FDF8611BB0BCF700EF8A28 /* SettingsNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsNavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,14 @@
 				D86098411B82310D00D37303 /* Images.xcassets */,
 				D86098431B82310D00D37303 /* LaunchScreen.xib */,
 				D86098341B82310D00D37303 /* Supporting Files */,
+				D8FDF8541BB0B2DE00EF8A28 /* PrivacyViewController.h */,
+				D8FDF8551BB0B2DE00EF8A28 /* PrivacyViewController.m */,
+				D8FDF8571BB0B38E00EF8A28 /* FriendsTableViewController.h */,
+				D8FDF8581BB0B38E00EF8A28 /* FriendsTableViewController.m */,
+				D8FDF85D1BB0BC0F00EF8A28 /* HelpViewController.h */,
+				D8FDF85E1BB0BC0F00EF8A28 /* HelpViewController.m */,
+				D8FDF8601BB0BCF700EF8A28 /* SettingsNavigationViewController.h */,
+				D8FDF8611BB0BCF700EF8A28 /* SettingsNavigationViewController.m */,
 			);
 			path = "IdeaBag-3";
 			sourceTree = "<group>";
@@ -220,8 +240,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D860983D1B82310D00D37303 /* ViewController.m in Sources */,
+				D8FDF8621BB0BCF700EF8A28 /* SettingsNavigationViewController.m in Sources */,
+				D8FDF85F1BB0BC0F00EF8A28 /* HelpViewController.m in Sources */,
 				D860983A1B82310D00D37303 /* AppDelegate.m in Sources */,
+				D8FDF8591BB0B38E00EF8A28 /* FriendsTableViewController.m in Sources */,
 				D86098371B82310D00D37303 /* main.m in Sources */,
+				D8FDF8561BB0B2DE00EF8A28 /* PrivacyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +442,7 @@
 				D86098561B82310D00D37303 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D86098571B82310D00D37303 /* Build configuration list for PBXNativeTarget "IdeaBag-3Tests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +451,7 @@
 				D86098591B82310D00D37303 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -180,7 +180,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="2fe-1u-JIE" userLabel="Map"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="tabicon-map" id="2fe-1u-JIE" userLabel="Map">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wW7-Vb-ZMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,7 +193,7 @@
             <objects>
                 <tableViewController id="uoR-qh-oag" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="2oU-qi-Rs5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -328,7 +330,7 @@
             <objects>
                 <tableViewController title="Ideas" id="fbn-Tb-frO" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="hY5-Ej-e80">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="n8e-Zz-elB">
@@ -437,7 +439,7 @@
                         <viewControllerLayoutGuide type="bottom" id="iTD-MQ-7u9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="76X-09-vOw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Idea Detail View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADW-x7-zdx">
@@ -460,7 +462,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="Friends" title="Friends" id="L2d-Ut-FxL" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Friends" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LDw-mC-VfR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search Friends" id="omF-Eg-F6B">
@@ -537,7 +539,7 @@
                         <viewControllerLayoutGuide type="bottom" id="SfZ-38-Ya1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7Sr-xe-w2s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friend Detail View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uam-PG-JCC">
@@ -825,11 +827,18 @@
         <scene sceneID="Fsc-aO-pZt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f3s-ku-VZi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Friends" id="VJE-Sg-oOw"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="tabicon-friends" selectedImage="tabicon-friends-selected" id="VJE-Sg-oOw">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="juC-xy-kQN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="juC-xy-kQN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.96470588239999999" green="0.18039215689999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -845,7 +854,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="Notifications" title="Notifications" id="X3f-nn-eVh" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Friends" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5ks-Wm-iB6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -910,7 +919,7 @@
             <objects>
                 <tableViewController title="Settings" id="c9p-AG-3RL" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="whV-SR-ihd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -1088,7 +1097,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9Kw-Nu-tBP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M7V-w4-Umq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Profile View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7B4-oS-19E">
@@ -1110,12 +1119,19 @@
         <scene sceneID="T3c-Ke-RFA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9tV-gt-Wpg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notifications" id="ngk-zR-zQq"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="tabicon-notifications" selectedImage="tabicon-notifications-selected" id="ngk-zR-zQq">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="adc-HG-ALp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="adc-HG-ALp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.96470588239999999" green="0.18039215689999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1129,12 +1145,19 @@
         <!--Settings-->
         <scene sceneID="Gja-T2-eek">
             <objects>
-                <navigationController title="Settings" automaticallyAdjustsScrollViewInsets="NO" id="aUh-Bf-IN5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="bW3-CV-N07"/>
+                <navigationController title="Settings" automaticallyAdjustsScrollViewInsets="NO" id="aUh-Bf-IN5" customClass="SettingsNavigationViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="tabicon-settings" selectedImage="tabicon-settings-selected" id="bW3-CV-N07">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N1g-iU-fdh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="N1g-iU-fdh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.96470588239999999" green="0.18039215689999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1154,7 +1177,7 @@
                         <viewControllerLayoutGuide type="bottom" id="UvT-d7-3PP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PrZ-Lc-rwV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change Password View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="189-bq-MFO">
@@ -1181,7 +1204,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7ys-35-dXK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="B7n-H8-aR3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Push Notifications View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS7-OY-oJc">
@@ -1208,7 +1231,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Mr0-J8-mK7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="btz-yv-oyx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHV-OP-QCf">
@@ -1229,13 +1252,13 @@
         <!--HelpView-->
         <scene sceneID="i3A-S6-qUK">
             <objects>
-                <viewController title="HelpView" id="P9y-Bl-Zxr" sceneMemberID="viewController">
+                <viewController title="HelpView" id="P9y-Bl-Zxr" customClass="HelpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YlB-B7-l8u"/>
                         <viewControllerLayoutGuide type="bottom" id="4KM-iN-jwF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IM9-Ur-XOC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLd-VI-mCF">
@@ -1256,13 +1279,13 @@
         <!--PrivacyView-->
         <scene sceneID="sbg-GW-Y9d">
             <objects>
-                <viewController title="PrivacyView" id="Eky-yI-SMX" sceneMemberID="viewController">
+                <viewController title="PrivacyView" id="Eky-yI-SMX" customClass="PrivacyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0gw-FQ-Bqd"/>
                         <viewControllerLayoutGuide type="bottom" id="Gw4-rm-2dt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JnF-nH-9PO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Privacy View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owo-9l-Le0">
@@ -1289,7 +1312,7 @@
                         <viewControllerLayoutGuide type="bottom" id="noq-Wg-aSr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="W5i-Ix-uVs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Report a Problem View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="px4-pG-RX7">
@@ -1311,11 +1334,18 @@
         <scene sceneID="P9s-a1-IbX">
             <objects>
                 <navigationController title="Idea" automaticallyAdjustsScrollViewInsets="NO" id="Ptu-yf-Dxi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ideas" id="PO3-LK-srj"/>
+                    <tabBarItem key="tabBarItem" title="Ideas" image="tabicon-ideas" selectedImage="tabicon-ideas-selected" id="PO3-LK-srj">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yZh-Ul-fbr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="yZh-Ul-fbr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.96470588239999999" green="0.18039215689999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1337,6 +1367,15 @@
         <image name="btn-Signup-unselected" width="150" height="50"/>
         <image name="icon-Received-Idea" width="22" height="22"/>
         <image name="icon-Sent-Idea" width="22" height="22"/>
+        <image name="tabicon-friends" width="75" height="45"/>
+        <image name="tabicon-friends-selected" width="75" height="45"/>
+        <image name="tabicon-ideas" width="75" height="45"/>
+        <image name="tabicon-ideas-selected" width="75" height="45"/>
+        <image name="tabicon-map" width="75" height="45"/>
+        <image name="tabicon-notifications" width="75" height="45"/>
+        <image name="tabicon-notifications-selected" width="75" height="45"/>
+        <image name="tabicon-settings" width="75" height="45"/>
+        <image name="tabicon-settings-selected" width="75" height="45"/>
         <image name="tableview-Friend-Profile-thumb" width="35" height="35"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
