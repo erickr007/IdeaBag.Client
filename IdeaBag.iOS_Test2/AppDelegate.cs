@@ -46,7 +46,13 @@ namespace IdeaBag.Client.iOS
 				Directory.CreateDirectory (dbdir);
 
 			string dbpath = Path.Combine (dbdir, "clientAppData.db");
-			DatabaseManager.Instance.Initialize (dbpath);
+
+			//- Create Database and Populate Application Settings
+			File.Delete(dbpath);
+			if (!File.Exists (dbpath)) {
+				File.Create (dbpath);
+				DatabaseManager.Instance.Initialize (dbpath);
+			}
 
 			return ApplicationDelegate.SharedInstance.FinishedLaunching (application, launchOptions);
 		}
