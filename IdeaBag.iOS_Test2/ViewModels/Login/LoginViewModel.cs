@@ -28,7 +28,7 @@ namespace IdeaBag.Client.iOS.ViewModels
 
 		private string _username;
 		private string _password;
-		private string _loginurl;
+		private string _serverurl;
 
 		#endregion
 
@@ -51,11 +51,11 @@ namespace IdeaBag.Client.iOS.ViewModels
 
 		#region Constructor
 
-		public LoginViewModel (string loginurl)
+		public LoginViewModel (string serverurl)
 		{
 			this._username = string.Empty;
 			this._password = string.Empty;
-			this._loginurl = loginurl;
+			this._serverurl = serverurl;
 
 			LoginTouchUpInside = new EventHandler (OnLoginTouchUpInside);
 		}
@@ -66,7 +66,9 @@ namespace IdeaBag.Client.iOS.ViewModels
 		#region Event Handlers
 
 		private void OnLoginTouchUpInside(object sender, EventArgs args){
-			string url = string.Format ("{0}?uid={1}&pw={2}", _loginurl, _username, _password);
+			string loginurl = _serverurl + "/authentication/loginstandarduser";
+
+			string url = string.Format ("{0}?uid={1}&pw={2}", loginurl, _username, _password);
 
 			WebClient client = new WebClient ();
 			string result = client.DownloadString (url);
