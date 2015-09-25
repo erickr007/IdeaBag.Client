@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Net;
+using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using IdeaBag.Portable.Data;
 using IdeaBag.Portable.Data.Models;
@@ -53,6 +55,25 @@ namespace IdeaBag.Client.iOS.DataAccess
 			});
 
 			return await userinfotask;
+		}
+
+		/// <summary>
+		/// Gets the user contacts.
+		/// </summary>
+		public async Task<List<UserModel>> GetUserContacts(string email, DateTime utcdate){
+			string usercontactsurl = string.Format (_serverurl + "/data/GetUserContacts?email={0}&utcdate={1}", email, utcdate.ToString ());
+
+			WebClient client = new WebClient ();
+
+			Task<List<UserModel> > usercontactstask = Task.Run (() => {
+				string result = client.DownloadString(usercontactsurl);
+
+				List<UserModel> contacts = JsonTools.Deserialize<List<UserModel>>(result);
+
+				return contacts;
+			});
+
+			return await usercontactstask;
 		}
 
 		#endregion

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using IdeaBag.Client.iOS.Models;
 using IdeaBag.Portable.Data;
 using IdeaBag.Portable.Data.Models;
 
@@ -109,7 +110,7 @@ namespace IdeaBag.Client.iOS.DataAccess
 		/// <summary>
 		/// Syncs the user with server.
 		/// </summary>
-		public async Task SyncUserWithServer(string email, string serverurl){
+		public async Task<UserModel> SyncUserWithServer(string email, string serverurl){
 			RestDataManager restmanager = new RestDataManager (serverurl);
 
 			UserModel serveruser = null;
@@ -121,14 +122,15 @@ namespace IdeaBag.Client.iOS.DataAccess
 				});
 
 				Task getlocal = Task.Factory.StartNew (async () => {
-					localuser = await GetUserSettings (email);
+					localuser = await GetUserDetails (email);
 				});
 
 				if(serveruser == null)
 					throw new Exception(string.Format("Unable to retrieve user: {0} from server: {1}", email,serverurl));
 
+				//- Insert user locally if not available on client database
 				if(localuser == null)
-					throw new Exception(string.Format("Unable to retrieve user: {0} from local database", email));
+					InsertUserDetails(serveruser);
 
 				Task.WaitAll (new Task[]{ getserver, getlocal });
 
@@ -137,7 +139,7 @@ namespace IdeaBag.Client.iOS.DataAccess
 					UpdateUser (serveruser);
 				}
 
-
+				return serveruser;
 
 			} catch (Exception ex) {
 				throw ex;
@@ -147,7 +149,7 @@ namespace IdeaBag.Client.iOS.DataAccess
 
 		#region Select
 
-		public async Task<UserModel> GetUserSettings(string email){
+		public async Task<UserModel> GetUserDetails(string email){
 			UserModel user = null;
 
 			string cmd = string.Format ("SELECT * FROM Users WHERE Email = '{0}'", email);
@@ -155,7 +157,10 @@ namespace IdeaBag.Client.iOS.DataAccess
 				try {
 					List<UserModel> users = DatabaseHelper.ExecuteQuery<UserModel> (_dbpath, cmd);
 
-					return users[0];
+					if(users.Count > 0)
+						return users[0];
+					else
+						throw new Exception(string.Format("No users found with the provided email address: {0}",email));
 				} 
 				catch (Exception ex) {
 					Debug.WriteLine (string.Format ("The following exception occurred in (ClientDatabaseManager.GetUserSettings) {0}", ex.Message));
@@ -171,7 +176,7 @@ namespace IdeaBag.Client.iOS.DataAccess
 
 		#region Insert
 
-		public async Task InsertUserSettings(UserModel user){
+		public async Task InsertUserDetails(UserModel user){
 			string cmd = string.Format("INSERT INTO Users(GlobalID, Email, Password, LoginType_FK, FirstName, LastName, HomeAddress, DateCreated, LastModified)"
 				+ "VALUES('{0}','{1}','{2}',{3},'{4}','{5}','{6}','{7}','{8}')",
 				user.GlobalID,
@@ -219,7 +224,7 @@ namespace IdeaBag.Client.iOS.DataAccess
 		#endregion
 
 
-		//#region Application Settings
+		#region Application Settings
 
 		#region GET
 
@@ -266,7 +271,114 @@ namespace IdeaBag.Client.iOS.DataAccess
 
 		#endregion
 
-		//#endregion
+		#endregion
+
+
+		#region Contacts
+
+		#region Sync
+
+		/// <summary>
+		/// Gets all contacts created on server after the last contact was created locally
+		/// </summary>
+		public async Task SyncUserContacts(string useremail, string serverurl){
+
+			try {
+				//- Get User's GlobalID
+				UserModel user = await GetUserDetails (useremail);
+
+				if (user == null)
+					throw new Exception ("User not found while trying to sync user contacts");
+
+				//- Get the last added contact added to local database
+				List<ContactModel> contacts = await GetUserContacts (user.GlobalID);
+
+				if(contacts.Count == 0)
+					return;
+				
+				//- Get all contacts created on Server after the last local contact was created
+				DateTime lastContactCreated = contacts[contacts.Count - 1].DateCreated;
+				RestDataManager restmanager = new RestDataManager(serverurl);
+
+				List<UserModel> recentcontacts = await restmanager.GetUserContacts(useremail, lastContactCreated);
+
+				//- add new contacts to local database
+				foreach(UserModel u in recentcontacts)
+					await InsertContact(u);
+				
+
+
+			} catch (Exception ex) {
+				Debug.WriteLine (string.Format ("The following exception occurred in (ClientDatabaseManager.SyncUserContacts) {0}", ex.Message));
+				return;
+			}
+
+
+		}
+
+		#endregion
+
+
+		#region GET
+
+		public async Task<List<ContactModel>> GetUserContacts(string userGlobalID){
+			string cmd = string.Format ("SELECT Contacts.GlobalID, Contacts.Email, Contacts.FirstName, Contacts.LastName, " +
+			             "Contacts.DateCreated FROM Contacts INNER JOIN UserContactLinks ucl ON ucl.Contact_FK = Contacts.GlobalID " +
+			             "WHERE ucl.User_FK = '{0}' ORDER BY DateCreated", userGlobalID);
+			List<ContactModel> contacts = new List<ContactModel> ();
+			try{
+				contacts = DatabaseHelper.ExecuteQuery<ContactModel>(_dbpath, cmd);
+			}
+			catch(Exception ex){
+				Debug.WriteLine(string.Format("The following exception occurred in (ClientDatabaseManager.GetUserContacts) {0}", ex.Message));
+			}
+
+			return contacts;
+		}
+
+		/// <summary>
+		/// Gets the contact details based on Email address
+		/// </summary>
+		public async Task<ContactModel> GetContactDetails(string email){
+			ContactModel contact = null;
+			string cmd = string.Format ("SELECT * FROM Contacts WHERE Email = {0}", email);
+
+			try{
+				List<ContactModel> contacts = DatabaseHelper.ExecuteQuery<ContactModel>(_dbpath, cmd);
+
+				if(contacts.Count > 0)
+					contact = contacts[0];
+			}
+			catch(Exception ex){
+				Debug.WriteLine(string.Format("The following exception occurred in (ClientDatabaseManager.GetContactDetails) {0}", ex.Message));
+			}
+
+			return contact;
+		}
+
+		#endregion
+
+
+		#region INSERT
+
+		public async Task InsertContact(UserModel user){
+			string cmd = string.Format ("INSERT INTO Contacts(GlobalID, Email, FirstName, LastName, DateCreated) " +
+			             "VALUES('{0}', '{1}', '{2}', '{3}', '{4}')", user.GlobalID, user.UserID, user.FirstName, user.LastName, user.CreateDate);
+
+			try{
+				DatabaseHelper.ExecuteNonQuery(_dbpath, cmd);
+
+			}
+			catch(Exception ex){
+				Debug.WriteLine(string.Format("The following exception occurred in (ClientDatabaseManager.InsertLocalContact) {0}", ex.Message));
+			}
+
+			return;
+		}
+
+		#endregion
+
+		#endregion
 
 		/*
 

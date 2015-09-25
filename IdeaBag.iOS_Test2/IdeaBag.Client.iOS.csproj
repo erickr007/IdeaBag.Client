@@ -72,17 +72,17 @@
     <Reference Include="Facebook">
       <HintPath>..\packages\Xamarin.Facebook.iOS.4.4.0.0\lib\Xamarin.iOS10\Facebook.dll</HintPath>
     </Reference>
-    <Reference Include="IdeaBag.Portable.Utility">
-      <HintPath>..\..\..\..\..\Volumes\C\Development\SourceCode\IdeaBag\Server\IdeaBag.Server.Core\Portable\IdeaBag.Portable.Utility\bin\Debug\IdeaBag.Portable.Utility.dll</HintPath>
-    </Reference>
-    <Reference Include="IdeaBag.Portable.ViewModels">
-      <HintPath>..\..\..\..\..\Volumes\C\Development\SourceCode\IdeaBag\Server\IdeaBag.Server.Core\Portable\IdeaBag.Portable.ViewModels\bin\Debug\IdeaBag.Portable.ViewModels.dll</HintPath>
-    </Reference>
-    <Reference Include="IdeaBag.Portable.Data">
-      <HintPath>..\..\..\..\..\Volumes\C\Development\SourceCode\IdeaBag\Server\IdeaBag.Server.Core\Portable\IdeaBag.Portable.Data\bin\Debug\IdeaBag.Portable.Data.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Data.Sqlite" />
     <Reference Include="System.Data" />
+    <Reference Include="IdeaBag.Portable.Data">
+      <HintPath>..\..\..\..\..\Volumes\C\Development\SourceCode\IdeaBag\Portable\IdeaBag.Portable.Data\bin\Debug\IdeaBag.Portable.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="IdeaBag.Portable.Utility">
+      <HintPath>..\..\..\..\..\Volumes\C\Development\SourceCode\IdeaBag\Portable\IdeaBag.Portable.Utility\bin\Debug\IdeaBag.Portable.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="IdeaBag.Portable.ViewModels">
+      <HintPath>..\..\..\..\..\Volumes\C\Development\SourceCode\IdeaBag\Portable\IdeaBag.Portable.ViewModels\bin\Debug\IdeaBag.Portable.ViewModels.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
@@ -125,11 +125,13 @@
     <Compile Include="SignupViewController.designer.cs">
       <DependentUpon>SignupViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DatabaseScripts.cs" />
-    <Compile Include="DataAccess\DatabaseManager.cs" />
     <Compile Include="SQLite.cs" />
     <Compile Include="SQLiteAsync.cs" />
-    <Compile Include="DataAccess\DatabaseHelper.cs" />
+    <Compile Include="DataAccess\Rest\RestDataManager.cs" />
+    <Compile Include="DataAccess\Database\DatabaseHelper.cs" />
+    <Compile Include="DataAccess\Database\DatabaseManager.cs" />
+    <Compile Include="DataAccess\Database\DatabaseScripts.cs" />
+    <Compile Include="Models\ContactModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -145,5 +147,8 @@
     <Folder Include="ViewModels\" />
     <Folder Include="ViewModels\Login\" />
     <Folder Include="DataAccess\" />
+    <Folder Include="DataAccess\Rest\" />
+    <Folder Include="DataAccess\Database\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>

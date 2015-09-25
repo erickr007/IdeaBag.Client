@@ -3,6 +3,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 using IdeaBag.Client.iOS.ViewModels;
+using IdeaBag.Client.iOS.DataAccess;
 using IdeaBag.Portable.Data;
 using IdeaBag.Portable.Data.Models;
 using IdeaBag.Portable.ViewModels;
@@ -15,7 +16,7 @@ namespace IdeaBag.Client.iOS
 		#region Private Properties
 
 		LoginViewModel _viewmodel;
-		string _loginurl = "http://idea-bag.com/authentication/loginstandarduser";
+		string _serverurl = "http://idea-bag.com";
 
 		#endregion
 
@@ -24,7 +25,7 @@ namespace IdeaBag.Client.iOS
 
 		public LoginViewController (IntPtr handle) : base (handle)
 		{
-			_viewmodel = new LoginViewModel (_loginurl);
+			_viewmodel = new LoginViewModel (_serverurl);
 			_viewmodel.OnLoginCompleted +=	HandleLoginResult;
 		}
 
@@ -58,9 +59,13 @@ namespace IdeaBag.Client.iOS
 
 		#region UI Methods
 
-		private void HandleLoginResult(object sender, LoginResultModel result){
+		private async void HandleLoginResult(object sender, LoginResultModel result){
 
 			if (result.ResultStatus == LoginResultType.Success) {
+				//- Synchronize this Users local database info with that stored on the Server
+				UserModel user = await DatabaseManager.Instance.SyncUserWithServer(tbUsername.Text, _serverurl);
+
+
 				lblValidation.Hidden = true;
 				UIStoryboard board = UIStoryboard.FromName ("Main", null);
 
