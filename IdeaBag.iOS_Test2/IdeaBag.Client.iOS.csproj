@@ -94,6 +94,8 @@
     <ImageAsset Include="Resources\Images.xcassets\LoginBtn.imageset\btn-Login-unselected.pdf">
       <InProject>false</InProject>
     </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\tabicon-notifications.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\tabicon-notifications.imageset\tabicon-notifications.pdf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
@@ -104,6 +106,7 @@
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
     <None Include="Main.storyboard.original" />
+    <None Include="Main.storyboard.093015" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -132,6 +135,18 @@
     <Compile Include="DataAccess\Database\DatabaseManager.cs" />
     <Compile Include="DataAccess\Database\DatabaseScripts.cs" />
     <Compile Include="Models\ContactModel.cs" />
+    <Compile Include="Navigation\MainTabbedController.cs" />
+    <Compile Include="Navigation\MainTabbedController.designer.cs">
+      <DependentUpon>MainTabbedController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsNavigationController.cs" />
+    <Compile Include="SettingsNavigationController.designer.cs">
+      <DependentUpon>SettingsNavigationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationsViewController.cs" />
+    <Compile Include="NotificationsViewController.designer.cs">
+      <DependentUpon>NotificationsViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -150,5 +165,7 @@
     <Folder Include="DataAccess\Rest\" />
     <Folder Include="DataAccess\Database\" />
     <Folder Include="Models\" />
+    <Folder Include="Navigation\" />
+    <Folder Include="Resources\Images.xcassets\tabicon-notifications.imageset\" />
   </ItemGroup>
 </Project>

@@ -44,7 +44,11 @@ namespace IdeaBag.Client.iOS
 			tbPassword.EditingChanged += (sender, e) => {
 				_viewmodel.Password = tbPassword.Text;
 			};
-			btnLogin.TouchUpInside += _viewmodel.LoginTouchUpInside;
+			//btnLogin.TouchUpInside += _viewmodel.LoginTouchUpInside;
+
+			//NotificationImage.Image = UIImage.FromBundle ("tabicon-notifications");
+
+
 		}
 
 
@@ -69,8 +73,8 @@ namespace IdeaBag.Client.iOS
 				lblValidation.Hidden = true;
 				UIStoryboard board = UIStoryboard.FromName ("Main", null);
 
-				UIViewController ctrl = (UIViewController)board.InstantiateViewController ("Ideas");
-				this.PresentViewController (ctrl, true, null);
+				UIViewController ctrl = (UIViewController)board.InstantiateViewController ("MainIdeas");
+				//this.PresentViewController (ctrl, true, null);
 			} 
 			else if (result.ResultStatus == LoginResultType.UserNotFound) {
 				lblValidation.Text = "User and/or Password not found.";

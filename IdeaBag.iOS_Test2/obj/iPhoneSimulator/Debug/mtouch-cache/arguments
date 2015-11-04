@@ -1,10 +1,10 @@
-# Version: 8.10.4.46 (2c66d2f)
+# Version: 9.0.1.20 (xcode7-c5: d8e9592)
 # [first argument, ignore] # /Users/eric/Projects/IdeaBag.Client/IdeaBag.iOS_Test2/mtouch.exe
-/Library/Frameworks/Xamarin.iOS.framework/Versions/8.10.4.46/bin/mtouch \
+/Library/Frameworks/Xamarin.iOS.framework/Versions/9.0.1.20/bin/mtouch \
 	--cache \
 	/Users/eric/Projects/IdeaBag.Client/IdeaBag.iOS_Test2/obj/iPhoneSimulator/Debug/mtouch-cache \
 	--sim \
-	/Users/eric/Projects/IdeaBag.Client/IdeaBag.iOS_Test2/bin/iPhoneSimulator/Debug/IdeaBag.iOS_Test2.app \
+	/Users/eric/Projects/IdeaBag.Client/IdeaBag.iOS_Test2/bin/iPhoneSimulator/Debug/IdeaBagiOS_Test2.app \
 	--executable \
 	IdeaBagiOS_Test2 \
 	--debug \
@@ -31,15 +31,15 @@
 	-r \
 	/Users/eric/Projects/IdeaBag.Client/packages/Xamarin.Facebook.iOS.4.4.0.0/lib/Xamarin.iOS10/Facebook.dll \
 	-r \
-	/Volumes/C/Development/SourceCode/IdeaBag/Server/IdeaBag.Server.Core/Portable/IdeaBag.Portable.Utility/bin/Debug/IdeaBag.Portable.Utility.dll \
-	-r \
-	/Volumes/C/Development/SourceCode/IdeaBag/Server/IdeaBag.Server.Core/Portable/IdeaBag.Portable.ViewModels/bin/Debug/IdeaBag.Portable.ViewModels.dll \
-	-r \
-	/Volumes/C/Development/SourceCode/IdeaBag/Server/IdeaBag.Server.Core/Portable/IdeaBag.Portable.Data/bin/Debug/IdeaBag.Portable.Data.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Mono.Data.Sqlite.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Data.dll \
+	-r \
+	/Volumes/C/Development/SourceCode/IdeaBag/Portable/IdeaBag.Portable.Data/bin/Debug/IdeaBag.Portable.Data.dll \
+	-r \
+	/Volumes/C/Development/SourceCode/IdeaBag/Portable/IdeaBag.Portable.Utility/bin/Debug/IdeaBag.Portable.Utility.dll \
+	-r \
+	/Volumes/C/Development/SourceCode/IdeaBag/Portable/IdeaBag.Portable.ViewModels/bin/Debug/IdeaBag.Portable.ViewModels.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
@@ -60,6 +60,8 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.Debug.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.Tools.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.Tracing.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Dynamic.Runtime.dll \
 	-r \
@@ -113,6 +115,8 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ServiceModel.Primitives.dll \
 	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ServiceModel.Security.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.Extensions.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.dll \
@@ -122,6 +126,8 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.Tasks.Parallel.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.Tasks.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.Timer.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.dll \
 	-r \
@@ -135,11 +141,13 @@
 	-r \
 	/Users/eric/Projects/IdeaBag.Client/packages/Xamarin.Facebook.iOS.4.4.0.0/lib/Xamarin.iOS10/Facebook.dll \
 	-r \
-	/Volumes/C/Development/SourceCode/IdeaBag/Server/IdeaBag.Server.Core/Portable/IdeaBag.Portable.Utility/bin/Debug/IdeaBag.Portable.Utility.dll \
+	/Volumes/C/Development/SourceCode/IdeaBag/Portable/IdeaBag.Portable.Data/bin/Debug/IdeaBag.Portable.Data.dll \
 	-r \
-	/Volumes/C/Development/SourceCode/IdeaBag/Server/IdeaBag.Server.Core/Portable/IdeaBag.Portable.ViewModels/bin/Debug/IdeaBag.Portable.ViewModels.dll \
+	/Volumes/C/Development/SourceCode/IdeaBag/Portable/IdeaBag.Portable.Utility/bin/Debug/IdeaBag.Portable.Utility.dll \
 	-r \
-	/Volumes/C/Development/SourceCode/IdeaBag/Server/IdeaBag.Server.Core/Portable/IdeaBag.Portable.Data/bin/Debug/IdeaBag.Portable.Data.dll \
+	/Volumes/C/Development/SourceCode/IdeaBag/Portable/IdeaBag.Portable.ViewModels/bin/Debug/IdeaBag.Portable.ViewModels.dll \
 	-r \
-	/Volumes/C/Development/SourceCode/IdeaBag/Server/IdeaBag.Server.Core/Portable/IdeaBag.Portable.Utility/bin/Debug/Newtonsoft.Json.dll \
-	/Users/eric/Projects/IdeaBag.Client/IdeaBag.iOS_Test2/bin/iPhoneSimulator/Debug//IdeaBag.iOS_Test2.exe \
+	/Volumes/C/Development/SourceCode/IdeaBag/Portable/IdeaBag.Portable.Utility/bin/Debug/Newtonsoft.Json.dll \
+	--target-framework \
+	"Xamarin.iOS,v1.0" \
+	/Users/eric/Projects/IdeaBag.Client/IdeaBag.iOS_Test2/bin/iPhoneSimulator/Debug//IdeaBagiOS_Test2.exe \
