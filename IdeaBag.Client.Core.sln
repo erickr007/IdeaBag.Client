@@ -16,6 +16,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdeaBag.Client.iOS.UITests", "IdeaBag.iOS_Test2.UITests\IdeaBag.Client.iOS.UITests.csproj", "{3094D37F-ABF3-4A92-8086-A132F4CAD5FF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source_References", "Source_References", "{14D56BA5-3F36-4B73-B250-C29374A3BDC0}"
+	ProjectSection(MonoDevelopProperties) = preProject
+		Policies = $0
+		$0.VersionControlPolicy = $1
+		$1.CommitMessageStyle = $2
+		$2.IncludeDirectoryPaths = True
+		$1.inheritsSet = Mono
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
