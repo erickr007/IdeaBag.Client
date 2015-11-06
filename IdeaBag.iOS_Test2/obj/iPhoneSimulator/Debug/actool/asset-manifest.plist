@@ -6,8 +6,8 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/eric/Projects/IdeaBag.Client.Core/IdeaBag.Client/IdeaBag.iOS_Test2/obj/iPhoneSimulator/Debug/actool/bundle/Assets.car</string>
-			<string>/Users/eric/Projects/IdeaBag.Client.Core/IdeaBag.Client/IdeaBag.iOS_Test2/obj/iPhoneSimulator/Debug/actool/partial-info.plist</string>
+			<string>/Users/Joe/Dropbox/IdeaBag/Projects/IdeaBag.Client/IdeaBag.iOS_Test2/obj/iPhoneSimulator/Debug/actool/bundle/Assets.car</string>
+			<string>/Users/Joe/Dropbox/IdeaBag/Projects/IdeaBag.Client/IdeaBag.iOS_Test2/obj/iPhoneSimulator/Debug/actool/partial-info.plist</string>
 		</array>
 	</dict>
 	<key>com.apple.actool.document.warnings</key>
@@ -18,7 +18,7 @@
 				<string>./AppIcons.appiconset/[car][120x120][][][1x][2d][(null)]</string>
 			</array>
 			<key>catalog</key>
-			<string>/Users/eric/Projects/IdeaBag.Client.Core/IdeaBag.Client/IdeaBag.iOS_Test2/Resources/Images.xcassets</string>
+			<string>/Users/Joe/Dropbox/IdeaBag/Projects/IdeaBag.Client/IdeaBag.iOS_Test2/Resources/Images.xcassets</string>
 			<key>message</key>
 			<string>The app icon set "AppIcons" has an unassigned child.</string>
 			<key>type</key>
